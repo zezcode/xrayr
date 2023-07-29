@@ -19,11 +19,11 @@ bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/XrayR.
 bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/80docker.sh) 
 ```
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/ht4g/xrayr/main/443docker.sh) 
+bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/443docker.sh) 
 ```
 # XrayR For HT4GVPN
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/ht4g/xrayr/main/ht4g.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/ht4g.sh)
 ```
 ◄▬▬▬▬𝐂𝐎𝐏𝐘𝐑𝐈𝐆𝐇𝐓©𝐇𝐓𝟒𝐆𝐕𝐏𝐍▬▬▬▬►
