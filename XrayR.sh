@@ -4,8 +4,6 @@ sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 80
 sudo ufw allow 443
-lam='\033[1;34m'        
-tim='\033[1;35m'
 bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/install.sh)
 read -p " Địa chỉ web(VD: https://example.com): " api_host
   [ -z "${api_host}" ] && api_host=https://example.com
@@ -120,9 +118,7 @@ sed -i "s|ApiHost:.*|ApiHost: ${api_host}|" ./config.yml
 sed -i "s|ApiKey:.*|ApiKey: ${api_key}|" ./config.yml
 sed -i "s|NodeID1:.*|NodeID: ${node_id1}|" ./config.yml
 sed -i "s|NodeID2:.*|NodeID: ${node_id2}|" ./config.yml
+clear
 cd /root && xrayr restart && clear && echo -e "   Cài Đặt Hoàn Tất!"
 #Speedtest
-sudo apt install speedtest-cli
-clear
-echo -e "${lam}【KIỂM TRA TỐC ĐỘ MẠNG VPS】${tim}"
-speedtest-cli
+curl -Lso- bench.sh | bash
