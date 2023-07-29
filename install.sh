@@ -140,7 +140,7 @@ install_XrayR() {
     chmod +x XrayR
     mkdir /etc/XrayR/ -p
     rm /etc/systemd/system/XrayR.service -f
-    file="https://raw.githubusercontent.com/ht4g/xrayx/main/XrayR.service"
+    file="https://raw.githubusercontent.com/overkillzero/xrayr/main/XrayR.service"
     wget -q -N --no-check-certificate -O /etc/systemd/system/XrayR.service ${file}
     #cp -f XrayR.service /etc/systemd/system/
     systemctl daemon-reload
@@ -181,7 +181,7 @@ install_XrayR() {
     if [[ ! -f /etc/XrayR/rulelist ]]; then
         cp rulelist /etc/XrayR/
     fi
-    curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/ht4g/xrayx/main/XrayR.sh
+    curl -o /usr/bin/XrayR -Ls https://raw.githubusercontent.com/ht4g/xrayr/main/XrayR.sh
     chmod +x /usr/bin/XrayR
     ln -s /usr/bin/XrayR /usr/bin/xrayr 
     chmod +x /usr/bin/xrayr

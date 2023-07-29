@@ -6,7 +6,7 @@ sudo ufw allow 80
 sudo ufw allow 443
 lam='\033[1;34m'        
 tim='\033[1;35m'
-bash <(curl -Ls https://raw.githubusercontent.com/ht4g/xrayx/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/install.sh)
 read -p " NODE ID Cổng 80 Vmess: " node_id1
   [ -z "${node_id1}" ] && node_id1=0
   
