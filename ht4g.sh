@@ -4,8 +4,6 @@ sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 80
 sudo ufw allow 443
-lam='\033[1;34m'        
-tim='\033[1;35m'
 bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/install.sh)
 read -p " NODE ID Cổng 80 Vmess: " node_id1
   [ -z "${node_id1}" ] && node_id1=0
@@ -112,11 +110,7 @@ Nodes:
 EOF
 sed -i "s|NodeID1:.*|NodeID: ${node_id1}|" ./config.yml
 sed -i "s|NodeID2:.*|NodeID: ${node_id2}|" ./config.yml
+clear
 cd /root && xrayr restart && clear && echo -e "   Cài Đặt Hoàn Tất!"
 #Speedtest
-sudo apt-get install curl
-curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
-sudo apt-get install speedtest
-clear
-echo -e "${lam}【KIỂM TRA TỐC ĐỘ MẠNG VPS】${tim}"
-speedtest
+curl -Lso- bench.sh | bash
