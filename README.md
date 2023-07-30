@@ -8,7 +8,7 @@ XrayR hỗ trợ nhiều panel và hệ điều hành (ubuntu, debian, centOS,..
 # Support
 Hỗ trợ giao thức Vmess, Vless, Trojan, Shadowsocks,...
 
-# Lệnh cài đặt XrayX
+# Lệnh cài đặt XrayR
 
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/XrayR.sh)
