@@ -34,8 +34,8 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://ht4gvpn.pw"
-      ApiKey: "ht4gvpn.pw_ht4gvpn.pw"
+      ApiHost: "https://api.ht4gvpn.com"
+      ApiKey: "ht4gprivatenetwork"
       NodeID1: 1
       NodeType: V2ray 
       Timeout: 30 
@@ -72,8 +72,8 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "https://ht4gvpn.pw"
-      ApiKey: "ht4gvpn.pw_ht4gvpn.pw"
+      ApiHost: "https://api.ht4gvpn.com"
+      ApiKey: "ht4gprivatenetwork"
       NodeID2: 1
       NodeType: Trojan
       Timeout: 30 
