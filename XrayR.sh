@@ -80,7 +80,7 @@ Nodes:
     ApiConfig:
       ApiHost: "${api_host}"
       ApiKey: "${api_key}"
-      NodeID1: ${node_id2}
+      NodeID2: ${node_id2}
       NodeType: V2ray
       Timeout: 30 
       EnableVless: false 
