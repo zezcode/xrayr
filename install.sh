@@ -109,7 +109,7 @@ install_XrayR() {
 	cd /usr/local/XrayR/
 
     if  [ $# == 0 ] ;then
-        last_version=$(curl -Ls "https://api.github.com/repos/XrayR-project/XrayR/releases/v0.9.0" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        last_version=$(curl -Ls "https://api.github.com/repos/XrayR-project/XrayR/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}Không xác định được phiên bản XrayR${plain}"
             exit 1
