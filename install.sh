@@ -109,13 +109,13 @@ install_XrayR() {
 	cd /usr/local/XrayR/
 
     if  [ $# == 0 ] ;then
-        last_version=$(curl -Ls "https://api.github.com/repos/XrayR-project/XrayR/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+        last_version=$(curl -Ls "https://api.github.com/repos/XrayR-project/XrayR/releases/v0.9.0" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
         if [[ ! -n "$last_version" ]]; then
             echo -e "${red}Không xác định được phiên bản XrayR${plain}"
             exit 1
         fi
-        echo -e "Phiên bản XrayR mới nhất：${last_version}，Bắt đầu cài đặt"
-        wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/XrayR-project/XrayR/releases/download/${last_version}/XrayR-linux-${arch}.zip
+        echo -e "Phiên bản XrayR mới nhất：v0.9.0，Bắt đầu cài đặt"
+        wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/XrayR-project/XrayR/releases/download/v0.9.0/XrayR-linux-${arch}.zip
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Không thể tải xuống XrayR, hãy thử lại!${plain}"
             exit 1
@@ -126,11 +126,11 @@ install_XrayR() {
 	else
 	    last_version="v"$1
 	fi
-        url="https://github.com/XrayR-project/XrayR/releases/download/${last_version}/XrayR-linux-${arch}.zip"
-        echo -e "Bắt đầu cài đặt XrayR ${last_version}"
+        url="https://github.com/XrayR-project/XrayR/releases/download/v0.9.0/XrayR-linux-${arch}.zip"
+        echo -e "Bắt đầu cài đặt XrayR v0.9.0"
         wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip ${url}
         if [[ $? -ne 0 ]]; then
-            echo -e "${red}Phiên bản XrayR ${last_version} Lỗi, không xác định được phiên bản${plain}"
+            echo -e "${red}Phiên bản XrayR v0.9.0 Lỗi, không xác định được phiên bản${plain}"
             exit 1
         fi
     fi
@@ -146,7 +146,7 @@ install_XrayR() {
     systemctl daemon-reload
     systemctl stop XrayR
     systemctl enable XrayR
-    echo -e "${green}XrayR ${last_version}${plain} Cài đặt hoàn tất!"
+    echo -e "${green}XrayR v0.9.0${plain} Cài đặt hoàn tất!"
     cp geoip.dat /etc/XrayR/
     cp geosite.dat /etc/XrayR/ 
 
