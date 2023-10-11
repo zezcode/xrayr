@@ -108,12 +108,7 @@ install_XrayR() {
     mkdir /usr/local/XrayR/ -p
 	cd /usr/local/XrayR/
 
-    if  [ $# == 0 ] ;then
-        last_version=$(curl -Ls "https://api.github.com/repos/XrayR-project/XrayR/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-        if [[ ! -n "$last_version" ]]; then
-            echo -e "${red}Không xác định được phiên bản XrayR${plain}"
-            exit 1
-        fi
+
         echo -e "Phiên bản XrayR mới nhất：v0.9.0，Bắt đầu cài đặt"
         wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/XrayR-project/XrayR/releases/download/v0.9.0/XrayR-linux-${arch}.zip
         if [[ $? -ne 0 ]]; then
