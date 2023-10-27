@@ -84,7 +84,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/install.sh)
+    bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/XrayR.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
@@ -108,7 +108,7 @@ update() {
 #        fi
 #        return 0
 #    fi
-    bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/install.sh) $version
+    bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/XrayR.sh) $version
     if [[ $? == 0 ]]; then
         echo -e "${green}Cập nhật hoàn tất và XrayR đã tự động khởi động lại, vui lòng sử dụng xrayr log để xem nhật ký${plain}"
         exit
