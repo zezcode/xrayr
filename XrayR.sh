@@ -70,7 +70,7 @@ Nodes:
         CertDomain: "" 
         CertFile: /etc/XrayR/ht4gvpn.crt
         KeyFile: /etc/XrayR/ht4gvpn.key
-        Provider: cloudflare 
+        Provider:  
         Email: 
         DNSEnv: 
           CLOUDFLARE_EMAIL:
@@ -81,7 +81,7 @@ Nodes:
       ApiHost: ${api_host}
       ApiKey: ${api_key}
       NodeID2: ${node_id2}
-      NodeType: V2ray
+      NodeType: Trojan
       Timeout: 30 
       EnableVless: false 
       EnableXTLS: false 
@@ -108,7 +108,7 @@ Nodes:
         CertDomain: "" 
         CertFile: /etc/XrayR/ht4g.crt 
         KeyFile: /etc/XrayR/ht4g.key
-        Provider: cloudflare 
+        Provider:  
         Email: 
         DNSEnv: 
           CLOUDFLARE_EMAIL: 
