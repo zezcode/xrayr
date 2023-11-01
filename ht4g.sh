@@ -4,7 +4,7 @@ sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 80
 sudo ufw allow 443
-bash <(curl -Ls https://github.com/overkillzero/xrayr/blob/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/install.sh)
 read -p " NODE ID Cổng 80 Vmess: " node_id1
   [ -z "${node_id1}" ] && node_id1=0
   
