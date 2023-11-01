@@ -31,11 +31,11 @@ InboundConfigPath: # /etc/XrayR/custom_inbound.json
 RouteConfigPath: # /etc/XrayR/route.json
 OutboundConfigPath: # /etc/XrayR/custom_outbound.json
 ConnectionConfig:
-  Handshake: 4 
-  ConnIdle: 30 
-  UplinkOnly: 2 
-  DownlinkOnly: 4 
-  BufferSize: 64 
+  Handshake: 5
+  ConnIdle: 300
+  UplinkOnly: 0
+  DownlinkOnly: 0
+  BufferSize: 0
 Nodes:
   -
     PanelType: "V2board" 
