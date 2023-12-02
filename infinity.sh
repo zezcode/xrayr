@@ -22,97 +22,112 @@ openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes -out /etc/XrayR/ht4g
 cd /etc/XrayR
 cat >config.yml <<EOF
 Log:
-  Log:
-  Level: none 
-  AccessPath: # /etc/XrayR/access.Log
-  ErrorPath: # /etc/XrayR/error.log
-DnsConfigPath: # /etc/XrayR/dns.json
-InboundConfigPath: # /etc/XrayR/custom_inbound.json
-RouteConfigPath: # /etc/XrayR/route.json
-OutboundConfigPath: # /etc/XrayR/custom_outbound.json
+  Level: warning 
+  AccessPath: 
+  ErrorPath: 
+DnsConfigPath: 
+RouteConfigPath:
+InboundConfigPath:
+OutboundConfigPath:
 ConnectionConfig:
   Handshake: 4
-  ConnIdle: 30
-  UplinkOnly: 2
-  DownlinkOnly: 4
-  BufferSize: 64
+  ConnIdle: 30 
+  UplinkOnly: 2 
+  DownlinkOnly: 4 
+  BufferSize: 64 
 Nodes:
   -
-    PanelType: "SSpanel" 
     ApiConfig:
       ApiHost: "${api_host}"
       ApiKey: "${api_key}"
-      NodeID1: ${node_id1}
-      NodeType: V2ray 
+      NodeID: ${node_id1}
       Timeout: 30 
-      EnableVless: false 
-      EnableXTLS: false 
-      SpeedLimit: 0
-      DeviceLimit: 0
-      RuleListPath: # /etc/XrayR/rulelist
+      SpeedLimit: 0 
+      DeviceLimit: 0 
+      RuleListPath: 
     ControllerConfig:
-      DisableSniffing: True
-      ListenIP: 0.0.0.0 
+      ListenIP: 0.0.0.0
       SendIP: 0.0.0.0 
-      UpdatePeriodic: 60 
+      UpdatePeriodic: 60
       EnableDNS: false 
       DNSType: AsIs 
-      EnableProxyProtocol: false 
+      EnableProxyProtocol: false
+      AutoSpeedLimitConfig:
+        Limit: 0 
+        WarnTimes: 0
+        LimitSpeed: 0
+        LimitDuration: 0 
+      GlobalDeviceLimitConfig:
+        Enable: false 
+        RedisAddr: 127.0.0.1:6379 
+        RedisPassword: YOUR PASSWORD 
+        RedisDB: 0 
+        Timeout: 5 
+        Expiry: 60 
       EnableFallback: false 
-      FallBackConfigs:  
+      FallBackConfigs: 
         -
           SNI: 
+          Alpn: 
           Path: 
           Dest: 80 
-          ProxyProtocolVer: 0 
+          ProxyProtocolVer: 0
       CertConfig:
-        CertMode: file 
+        CertMode: none 
         CertDomain: "" 
-        CertFile: /etc/XrayR/ht4gvpn.crt
+        CertFile: /etc/XrayR/ht4gvpn.crt 
         KeyFile: /etc/XrayR/ht4gvpn.key
-        Provider:  
-        Email: 
+        Provider: cloudflare
+        Email: ht4gvpnvip@gmail.com
         DNSEnv: 
-          CLOUDFLARE_EMAIL:
-          CLOUDFLARE_API_KEY:
+          ALICLOUD_ACCESS_KEY: aaa
+          ALICLOUD_SECRET_KEY: bbb      
   -
-    PanelType: "SSpanel" 
     ApiConfig:
       ApiHost: "${api_host}"
       ApiKey: "${api_key}"
-      NodeID2: ${node_id2}
-      NodeType: Trojan
+      NodeID: ${node_id2}
       Timeout: 30 
-      EnableVless: false 
-      EnableXTLS: false 
-      SpeedLimit: 0
-      DeviceLimit: 0
-      RuleListPath: # /etc/XrayR/rulelist
+      SpeedLimit: 0 
+      DeviceLimit: 0 
+      RuleListPath: 
     ControllerConfig:
-      DisableSniffing: True
-      ListenIP: 0.0.0.0 
+      ListenIP: 0.0.0.0
       SendIP: 0.0.0.0 
-      UpdatePeriodic: 60 
+      UpdatePeriodic: 60
       EnableDNS: false 
       DNSType: AsIs 
-      EnableProxyProtocol: false 
+      EnableProxyProtocol: false
+      AutoSpeedLimitConfig:
+        Limit: 0 
+        WarnTimes: 0
+        LimitSpeed: 0
+        LimitDuration: 0 
+      GlobalDeviceLimitConfig:
+        Enable: false 
+        RedisAddr: 127.0.0.1:6379 
+        RedisPassword: YOUR PASSWORD 
+        RedisDB: 0 
+        Timeout: 5 
+        Expiry: 60 
       EnableFallback: false 
-      FallBackConfigs:  
+      FallBackConfigs: 
         -
           SNI: 
+          Alpn: 
           Path: 
           Dest: 80 
-          ProxyProtocolVer: 0 
+          ProxyProtocolVer: 0
       CertConfig:
         CertMode: file 
         CertDomain: "" 
         CertFile: /etc/XrayR/ht4g.crt 
         KeyFile: /etc/XrayR/ht4g.key
-        Provider:  
-        Email: 
+        Provider: cloudflare
+        Email: ht4gvpnvip@gmail.com
         DNSEnv: 
-          CLOUDFLARE_EMAIL: 
-          CLOUDFLARE_API_KEY: 
+          ALICLOUD_ACCESS_KEY: aaa
+          ALICLOUD_SECRET_KEY: bbb        
 EOF
 sed -i "s|ApiHost:.*|ApiHost: ${api_host}|" ./config.yml
 sed -i "s|ApiKey:.*|ApiKey: ${api_key}|" ./config.yml
