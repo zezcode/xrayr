@@ -4,7 +4,7 @@ sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 80
 sudo ufw allow 443
-bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/install.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/setup.sh)
 read -p " Địa chỉ web(VD: https://example.com): " api_host
   [ -z "${api_host}" ] && api_host=https://example.com
 
