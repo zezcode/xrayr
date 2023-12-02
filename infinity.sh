@@ -40,8 +40,8 @@ Nodes:
   -
     PanelType: "SSpanel" 
     ApiConfig:
-      ApiHost: ${api_host}
-      ApiKey: ${api_key}
+      ApiHost: "${api_host}"
+      ApiKey: "${api_key}"
       NodeID1: ${node_id1}
       NodeType: V2ray 
       Timeout: 30 
@@ -78,8 +78,8 @@ Nodes:
   -
     PanelType: "SSpanel" 
     ApiConfig:
-      ApiHost: ${api_host}
-      ApiKey: ${api_key}
+      ApiHost: "${api_host}"
+      ApiKey: "${api_key}"
       NodeID2: ${node_id2}
       NodeType: Trojan
       Timeout: 30 
