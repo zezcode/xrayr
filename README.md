@@ -26,4 +26,9 @@ bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/443doc
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/ht4g.sh)
 ```
+# XrayR For InfinityPanel
+
+```
+bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/infinity.sh)
+```
 ◄▬▬▬▬𝐂𝐎𝐏𝐘𝐑𝐈𝐆𝐇𝐓©𝐇𝐓𝟒𝐆𝐕𝐏𝐍▬▬▬▬►
