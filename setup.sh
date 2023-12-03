@@ -114,7 +114,7 @@ install_XrayR() {
             echo -e "${red}Không xác định được phiên bản XrayR${plain}"
             exit 1
         fi
-        echo -e "Phiên bản XrayR mới nhất：v0.9.0，Bắt đầu cài đặt"
+        echo -e "Phiên bản XrayR mới nhất: ${last_version}，Bắt đầu cài đặt"
         wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip https://github.com/overkillzero/xrayr/releases/download/${last_version}/XrayR-linux-${arch}.zip
         if [[ $? -ne 0 ]]; then
             echo -e "${red}Không thể tải xuống XrayR, hãy thử lại!${plain}"
@@ -130,7 +130,7 @@ install_XrayR() {
         echo -e "Bắt đầu cài đặt XrayR ${last_version}${plain}"
         wget -q -N --no-check-certificate -O /usr/local/XrayR/XrayR-linux.zip ${url}
         if [[ $? -ne 0 ]]; then
-            echo -e "${red}Phiên bản XrayR v0.9.0 Lỗi, không xác định được phiên bản${plain}"
+            echo -e "${red}Phiên bản XrayR ${last_version} Lỗi, không xác định được phiên bản${plain}"
             exit 1
         fi
     fi
@@ -146,7 +146,7 @@ install_XrayR() {
     systemctl daemon-reload
     systemctl stop XrayR
     systemctl enable XrayR
-    echo -e "${green}XrayR v0.9.0${plain} Cài đặt hoàn tất!"
+    echo -e "${green}XrayR ${last_version} Cài đặt hoàn tất!"
     cp geoip.dat /etc/XrayR/
     cp geosite.dat /etc/XrayR/ 
 
