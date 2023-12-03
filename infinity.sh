@@ -46,6 +46,7 @@ Nodes:
       DeviceLimit: 0 
       RuleListPath: 
     ControllerConfig:
+      DisableSniffing: true
       ListenIP: 0.0.0.0
       SendIP: 0.0.0.0 
       UpdatePeriodic: 60
@@ -92,6 +93,7 @@ Nodes:
       DeviceLimit: 0 
       RuleListPath: 
     ControllerConfig:
+      DisableSniffing: true
       ListenIP: 0.0.0.0
       SendIP: 0.0.0.0 
       UpdatePeriodic: 60
