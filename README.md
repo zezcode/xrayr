@@ -26,7 +26,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/443doc
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/ht4g.sh)
 ```
-# XrayR For InfinityPanel
+# XrayR For GalaxyPanel
 
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/overkillzero/xrayr/main/infinity.sh)
