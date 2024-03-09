@@ -64,7 +64,7 @@ Nodes:
           Dest: 80 
           ProxyProtocolVer: 0 
       CertConfig:
-        CertMode: file 
+        CertMode: none 
         CertDomain: "" 
         CertFile: /etc/XrayR/ht4gvpn.crt
         KeyFile: /etc/XrayR/ht4gvpn.key
